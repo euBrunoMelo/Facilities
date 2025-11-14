@@ -68,6 +68,25 @@ const testimonials = [
 
 const CTA_LABEL = "Solicitar Orçamento Gratuito";
 
+const mediaItems = [
+  {
+    type: "image",
+    src: "/sala/forro_sala1.jpg",
+    alt: "Detalhe do forro finalizado na sala",
+  },
+  {
+    type: "image",
+    src: "/sala/forro_sala2.jpg",
+    alt: "Execução do forro em andamento",
+  },
+  {
+    type: "video",
+    src: "/sala/video_final.mp4",
+    poster: "/sala/forro_sala1.jpg",
+    alt: "Vídeo apresentando o resultado final da sala",
+  },
+] as const;
+
 export default function Home() {
   return (
     <div className="bg-[#F4F6F8] text-[#333333]">
@@ -158,16 +177,47 @@ export default function Home() {
         </header>
 
         <section className="section pt-0">
-          <div className="container">
-            <div className="grid gap-4 rounded-2xl bg-white p-6 text-sm font-semibold uppercase tracking-wide text-[#0A2A4E] shadow-lg sm:grid-cols-3">
-              {trustHighlights.map((item) => (
-                <div
-                  key={item.title}
-                  className="rounded-xl border border-[#0A2A4E]/10 bg-[#F4F6F8] px-4 py-5 text-center"
+          <div className="container space-y-6">
+            <div className="max-w-3xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.4em] text-[#0A2A4E]/80">
+                Antes e Depois em destaque
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold text-[#0A2A4E]">
+                Veja como transformamos ambientes com acabamento preciso
+              </h2>
+              <p className="mt-4 text-lg text-[#333333]/80">
+                Resultado real de um projeto recente: planejamento, execução do
+                forro e finalização com limpeza completa. A mesma equipe que
+                lidera este processo pode estar no seu imóvel.
+              </p>
+            </div>
+            <div className="space-y-6">
+              <div className="grid gap-6 md:grid-cols-2">
+                {mediaItems.slice(0, 2).map((item) => (
+                  <figure
+                    key={item.src}
+                    className="overflow-hidden rounded-2xl bg-white shadow-lg"
+                  >
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      width={760}
+                      height={540}
+                      className="h-full w-full object-cover"
+                    />
+                  </figure>
+                ))}
+              </div>
+              <figure className="overflow-hidden rounded-2xl bg-white shadow-lg">
+                <video
+                  controls
+                  poster={mediaItems[0].src}
+                  className="h-full w-full object-cover"
                 >
-                  {item.title}
-                </div>
-              ))}
+                  <source src={mediaItems[2].src} type="video/mp4" />
+                  Seu navegador não suporta o elemento de vídeo.
+                </video>
+              </figure>
             </div>
           </div>
         </section>
