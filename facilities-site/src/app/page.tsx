@@ -164,6 +164,9 @@ export default function Home() {
         <header className="section pb-0">
           <div className="container">
             <div className="rounded-[48px] bg-[#8B9A8C] px-8 py-16 text-center text-white shadow-2xl sm:px-12 lg:px-20">
+              <p className="text-base font-semibold uppercase tracking-[0.5em] text-white/70">
+                Facilities
+              </p>
               <h1 className="mt-6 text-4xl font-semibold leading-tight tracking-[-0.02em] text-white sm:text-5xl lg:text-6xl">
                 Acabamento impecável e obras completas para valorizar seu imóvel
               </h1>
