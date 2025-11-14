@@ -114,7 +114,9 @@ export default function Home() {
                   </div>
                 </div>
                 <a
-                  href="#contato"
+                  href="https://wa.me/5562994149502?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20or%C3%A7amento%20gratuito."
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex items-center justify-center rounded-full bg-[#F9A825] px-6 py-3 text-sm font-semibold uppercase tracking-wide text-[#0A2A4E] transition hover:bg-[#ffb733]"
                 >
                   {CTA_LABEL}
@@ -136,7 +138,9 @@ export default function Home() {
                   </p>
                   <div className="flex flex-wrap gap-4">
                     <a
-                      href="#contato"
+                      href="https://wa.me/5562994149502?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20or%C3%A7amento%20gratuito."
+                      target="_blank"
+                      rel="noreferrer"
                       className="inline-flex items-center justify-center rounded-full bg-[#F9A825] px-6 py-3 text-base font-semibold text-[#0A2A4E] transition hover:bg-[#ffb733]"
                     >
                       {CTA_LABEL}
@@ -348,7 +352,9 @@ export default function Home() {
                     Pronto para começar?
                   </p>
                   <a
-                    href="mailto:contato@facilities.com?subject=Solicitar%20Or%C3%A7amento"
+                    href="https://wa.me/5562994149502?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20or%C3%A7amento%20gratuito."
+                    target="_blank"
+                    rel="noreferrer"
                     className="inline-flex items-center justify-center rounded-full bg-[#F9A825] px-6 py-3 text-base font-semibold text-[#0A2A4E] transition hover:bg-[#ffb733]"
                   >
                     {CTA_LABEL}
