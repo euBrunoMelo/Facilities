@@ -1,4 +1,72 @@
 import Image from "next/image";
+import type { SVGProps } from "react";
+
+const HomeIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={1.5}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M3 10.5 12 4l9 6.5" />
+    <path d="M5 9.5V20h14V9.5" />
+    <path d="M9 20v-6h6v6" />
+  </svg>
+);
+
+const GearIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={1.5}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <circle cx="12" cy="12" r="3" />
+    <path d="M19.4 15a7.97 7.97 0 0 0 .1-2 7.97 7.97 0 0 0-.1-2l2.1-1.6-2-3.4-2.5 1a8 8 0 0 0-3.5-2l-.4-2.7h-4l-.4 2.7a8 8 0 0 0-3.5 2l-2.5-1-2 3.4L4.6 11a7.97 7.97 0 0 0-.1 2 7.97 7.97 0 0 0 .1 2L2.5 16.6l2 3.4 2.5-1a8 8 0 0 0 3.5 2l.4 2.7h4l.4-2.7a8 8 0 0 0 3.5-2l2.5 1 2-3.4Z" />
+  </svg>
+);
+
+const BuildingIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={1.5}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M5 20V4h6v16" />
+    <path d="M11 6h8v14" />
+    <path d="M3 20h18" />
+    <path d="M8 8v2" />
+    <path d="M8 12v2" />
+    <path d="M8 16v2" />
+    <path d="M15 8v2" />
+    <path d="M15 12v2" />
+    <path d="M15 16v2" />
+  </svg>
+);
+
+const CheckIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={1.5}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M5 13 9 17 19 7" />
+  </svg>
+);
 
 const trustHighlights = [
   {
@@ -23,23 +91,27 @@ const serviceCards = [
     title: "Residenciais sob medida",
     description:
       "Tudo começa com uma ideia. Talvez você queira transformar um ambiente residencial completo em algo novo.",
+    icon: HomeIcon,
   },
   {
     title: "Reformas estruturais",
     description:
       "Talvez você esteja pronto para ampliar um negócio. Nós conduzimos obras integrais com cronograma seguro.",
+    icon: GearIcon,
   },
   {
     title: "Projetos corporativos",
     description:
       "Ou talvez precise preparar lojas e escritórios para funcionar sem interrupções. Fazemos isso do piso ao forro.",
+    icon: BuildingIcon,
   },
   {
     title: "Facilities contínuo",
     description:
       "Para quem busca manutenção preventiva e corretiva em ciclos, cuidamos de cada detalhe com equipe fixa.",
+    icon: CheckIcon,
   },
-];
+] as const;
 
 const testimonials = [
   {
@@ -92,9 +164,6 @@ export default function Home() {
         <header className="section pb-0">
           <div className="container">
             <div className="rounded-[48px] bg-[#8B9A8C] px-8 py-16 text-center text-white shadow-2xl sm:px-12 lg:px-20">
-              <p className="text-xs font-semibold uppercase tracking-[0.6em] text-white/70">
-                Desde 1985 • Construção | Manutenção | Facilities
-              </p>
               <h1 className="mt-6 text-4xl font-semibold leading-tight tracking-[-0.02em] text-white sm:text-5xl lg:text-6xl">
                 Acabamento impecável e obras completas para valorizar seu imóvel
               </h1>
@@ -201,25 +270,33 @@ export default function Home() {
               </p>
             </div>
             <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-              {serviceCards.map((card) => (
-                <article
-                  key={card.title}
-                  className="flex h-full flex-col gap-4 rounded-[32px] bg-white px-6 py-8 shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
-                >
-                  <div className="h-14 w-14 rounded-full border border-[#8B9A8C]/40 text-center text-2xl font-semibold text-[#8B9A8C]">
-                    •
-                  </div>
-                  <h3 className="text-2xl font-semibold tracking-[-0.02em] text-[#1A1A1A]">
-                    {card.title}
-                  </h3>
-                  <p className="text-base leading-relaxed text-[#555555]">
-                    {card.description}
-                  </p>
-                  <span className="mt-auto text-sm font-semibold uppercase tracking-[0.3em] text-[#8B9A8C]">
-                    ENTRE EM CONTATO
-                  </span>
-                </article>
-              ))}
+              {serviceCards.map((card) => {
+                const Icon = card.icon;
+                return (
+                  <article
+                    key={card.title}
+                    className="flex h-full flex-col gap-4 rounded-[32px] bg-white px-6 py-8 shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
+                  >
+                    <div className="flex h-14 w-14 items-center justify-center rounded-full border border-[#8B9A8C]/40 text-[#8B9A8C]">
+                      <Icon className="h-6 w-6" />
+                    </div>
+                    <h3 className="text-2xl font-semibold tracking-[-0.02em] text-[#1A1A1A]">
+                      {card.title}
+                    </h3>
+                    <p className="text-base leading-relaxed text-[#555555]">
+                      {card.description}
+                    </p>
+                    <a
+                      href={WHATSAPP_LINK}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-auto text-sm font-semibold uppercase tracking-[0.3em] text-[#8B9A8C] underline-offset-4 transition hover:text-[#6f7b70]"
+                    >
+                      ENTRE EM CONTATO
+                    </a>
+                  </article>
+                );
+              })}
             </div>
           </div>
         </section>
