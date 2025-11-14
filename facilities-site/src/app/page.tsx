@@ -128,7 +128,7 @@ const testimonials = [
   },
   {
     quote:
-      "Gerenciar facilities é desafiador, mas com a Facilities ganhei um parceiro pontual e confiável para cada loja.",
+      "Gerenciar é desafiador, mas com a Facilities ganhei um parceiro pontual e confiável para cada loja.",
     name: "Luciana Souza",
     role: "Gerente de operações comerciais",
   },
