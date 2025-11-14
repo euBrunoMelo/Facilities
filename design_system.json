@@ -1,0 +1,270 @@
+{
+  "designSystem": {
+    "brandName": "Oranssi",
+    "industry": "Construção Civil / Casas Novas",
+    "established": "1985",
+    
+    "colorPalette": {
+      "primary": {
+        "sageGreen": "#8B9A8C",
+        "description": "Verde musgo/sage usado como cor principal de fundo"
+      },
+      "secondary": {
+        "offWhite": "#F5F5F0",
+        "description": "Branco sujo/creme para áreas de conteúdo"
+      },
+      "accent": {
+        "black": "#1A1A1A",
+        "description": "Preto para textos e elementos de contraste"
+      },
+      "neutral": {
+        "white": "#FFFFFF",
+        "description": "Branco puro para cards e CTAs"
+      }
+    },
+    
+    "typography": {
+      "headings": {
+        "style": "Sans-serif pesada",
+        "weight": "700-900",
+        "case": "Sentence case",
+        "size": {
+          "h1": "64-80px",
+          "h2": "48-56px",
+          "h3": "32-40px"
+        },
+        "letterSpacing": "-0.02em",
+        "lineHeight": "1.1"
+      },
+      "body": {
+        "style": "Sans-serif limpa",
+        "weight": "400-500",
+        "size": "16-18px",
+        "lineHeight": "1.6",
+        "color": "Preto ou branco dependendo do fundo"
+      },
+      "buttons": {
+        "style": "Sans-serif",
+        "weight": "500",
+        "case": "UPPERCASE",
+        "size": "14-16px",
+        "letterSpacing": "0.05em"
+      }
+    },
+    
+    "layout": {
+      "grid": {
+        "columns": "4 colunas em desktop",
+        "gutter": "24-32px",
+        "margin": "40-80px nas laterais"
+      },
+      "sections": {
+        "padding": "80-120px vertical",
+        "maxWidth": "1440px",
+        "alignment": "Centro com margens responsivas"
+      }
+    },
+    
+    "components": {
+      "serviceCards": {
+        "structure": {
+          "container": "Grid de 4 colunas",
+          "cardStyle": "Fundo branco com padding generoso",
+          "aspectRatio": "Quadrado ou 4:5"
+        },
+        "content": {
+          "icon": {
+            "style": "Linhas minimalistas",
+            "size": "48-64px",
+            "position": "Topo centralizado",
+            "strokeWidth": "2-3px"
+          },
+          "title": {
+            "style": "Sans-serif bold",
+            "size": "24-28px",
+            "margin": "24px após ícone"
+          },
+          "description": {
+            "style": "Texto placeholder repetitivo",
+            "template": "Tudo começa com uma ideia. Talvez você queira abrir um negócio."
+          }
+        }
+      },
+      
+      "buttons": {
+        "primary": {
+          "background": "Branco",
+          "color": "Preto",
+          "padding": "16px 32px",
+          "borderRadius": "50px (pill shape)",
+          "text": "ENTRE EM CONTATO",
+          "hoverEffect": "Inversão de cores suave"
+        }
+      },
+      
+      "heroSection": {
+        "layout": "Texto centralizado sobre fundo colorido",
+        "heading": {
+          "size": "80-120px",
+          "color": "Branco",
+          "weight": "900",
+          "alignment": "Centro"
+        },
+        "carousel": {
+          "hasArrows": true,
+          "arrowStyle": "Círculos brancos com ícones minimalistas",
+          "imageAspectRatio": "16:10"
+        }
+      },
+      
+      "projectGallery": {
+        "layout": "Grid horizontal com scroll",
+        "cards": {
+          "imageHeight": "400px",
+          "hasOverlay": false,
+          "title": {
+            "position": "Abaixo da imagem",
+            "style": "Sans-serif bold uppercase",
+            "size": "18px"
+          }
+        },
+        "navigation": {
+          "arrows": "Círculos com setas",
+          "position": "Lateral direita"
+        }
+      },
+      
+      "testimonials": {
+        "background": "Verde sage",
+        "quote": {
+          "color": "Branco",
+          "size": "24-32px",
+          "weight": "500",
+          "quotationMarks": true,
+          "alignment": "Centro"
+        },
+        "author": {
+          "style": "Nome em regular",
+          "size": "16px",
+          "color": "Branco com 80% opacidade"
+        },
+        "navigation": {
+          "dots": false,
+          "arrows": "Círculos brancos"
+        }
+      },
+      
+      "ctaSection": {
+        "layout": "Split screen - imagem à esquerda, conteúdo à direita",
+        "imageWidth": "40%",
+        "contentWidth": "60%",
+        "heading": {
+          "text": "Pronto para criar sua visão?",
+          "size": "48px",
+          "color": "Branco"
+        },
+        "description": {
+          "template": "Mesmo texto placeholder dos cards de serviço",
+          "color": "Branco com 90% opacidade"
+        }
+      }
+    },
+    
+    "imagery": {
+      "style": "Fotografia profissional de construção",
+      "subjects": [
+        "Trabalhadores em ação",
+        "Detalhes arquitetônicos",
+        "Madeira e materiais naturais",
+        "Projetos finalizados"
+      ],
+      "colorGrading": "Natural com tons quentes",
+      "composition": "Ângulos dinâmicos, close-ups de detalhes"
+    },
+    
+    "interactions": {
+      "hover": {
+        "cards": "Elevação sutil com sombra",
+        "buttons": "Inversão de cores",
+        "images": "Zoom suave de 1.05x"
+      },
+      "transitions": {
+        "duration": "0.3s",
+        "easing": "ease-in-out"
+      }
+    },
+    
+    "responsiveness": {
+      "breakpoints": {
+        "mobile": "< 768px",
+        "tablet": "768px - 1024px",
+        "desktop": "> 1024px"
+      },
+      "mobileAdaptations": {
+        "grid": "1 coluna",
+        "typography": "Redução de 20-30% nos tamanhos",
+        "spacing": "Redução de 50% no padding"
+      }
+    },
+    
+    "contentPatterns": {
+      "headlines": {
+        "style": "Direto e impactante",
+        "examples": [
+          "Nossos serviços",
+          "Nossos projetos",
+          "CONSTRUTORES DE CASAS NOVAS",
+          "O que dizem nossos clientes"
+        ]
+      },
+      "bodyCopy": {
+        "placeholder": "Tudo começa com uma ideia. Talvez você queira abrir um negócio. Talvez você queira transformar um passatempo em algo mais sério. Ou talvez você tenha um projeto criativo para compartilhar com o mundo.",
+        "usage": "Usado consistentemente em múltiplas seções"
+      },
+      "cta": {
+        "primary": "ENTRE EM CONTATO",
+        "secondary": "Fale conosco"
+      }
+    },
+    
+    "iconography": {
+      "style": "Lineart minimalista",
+      "strokeWidth": "2-3px",
+      "color": "Monocromático (preto)",
+      "examples": {
+        "decks": "4 linhas verticais paralelas",
+        "areas": "Triângulo com linhas internas",
+        "additions": "3 linhas horizontais empilhadas",
+        "greenConstruction": "Padrão de ondas"
+      }
+    },
+    
+    "footer": {
+      "style": "Minimalista",
+      "content": {
+        "heading": "Fale conosco",
+        "address": "Rua Exemplo 123, Nova York, NY 12345",
+        "background": "Continuação do verde sage"
+      }
+    }
+  },
+  
+  "implementationNotes": {
+    "consistency": [
+      "Usar sempre o mesmo tom de verde sage (#8B9A8C) como cor principal",
+      "Manter o padrão de texto placeholder em todas as seções similares",
+      "Botões sempre em formato pill com texto em maiúsculas",
+      "Espaçamento consistente entre seções (80-120px)"
+    ],
+    "accessibility": [
+      "Contraste adequado entre texto branco e fundo verde",
+      "Tamanhos de fonte legíveis (mínimo 16px para body)",
+      "Áreas de clique generosas nos botões e links"
+    ],
+    "performance": [
+      "Otimizar imagens para web",
+      "Lazy loading para imagens fora da viewport",
+      "Transições CSS em vez de JavaScript quando possível"
+    ]
+  }
+}

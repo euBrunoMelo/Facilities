@@ -18,30 +18,26 @@ const trustHighlights = [
   },
 ];
 
-const serviceCategories = [
+const serviceCards = [
   {
-    title: "Manutenção Residencial",
-    items: [
-      "Elétrica e hidráulica completa",
-      "Pequenos reparos e marcenaria",
-      "Pintura e renovação de ambientes",
-    ],
+    title: "Residenciais sob medida",
+    description:
+      "Tudo começa com uma ideia. Talvez você queira transformar um ambiente residencial completo em algo novo.",
   },
   {
-    title: "Reformas e Construção",
-    items: [
-      "Cozinhas e banheiros sob medida",
-      "Pisos, revestimentos e alvenaria",
-      "Projetos estruturais com acompanhamento",
-    ],
+    title: "Reformas estruturais",
+    description:
+      "Talvez você esteja pronto para ampliar um negócio. Nós conduzimos obras integrais com cronograma seguro.",
   },
   {
-    title: "Serviços Comerciais",
-    items: [
-      "Contratos de facilities",
-      "Manutenção preventiva e corretiva",
-      "Adequação de lojas e escritórios",
-    ],
+    title: "Projetos corporativos",
+    description:
+      "Ou talvez precise preparar lojas e escritórios para funcionar sem interrupções. Fazemos isso do piso ao forro.",
+  },
+  {
+    title: "Facilities contínuo",
+    description:
+      "Para quem busca manutenção preventiva e corretiva em ciclos, cuidamos de cada detalhe com equipe fixa.",
   },
 ];
 
@@ -67,6 +63,8 @@ const testimonials = [
 ];
 
 const CTA_LABEL = "Solicitar Orçamento Gratuito";
+const WHATSAPP_LINK =
+  "https://wa.me/5562994149502?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20or%C3%A7amento%20gratuito.";
 
 const mediaItems = [
   {
@@ -89,92 +87,51 @@ const mediaItems = [
 
 export default function Home() {
   return (
-    <div className="bg-[#F4F6F8] text-[#333333]">
+    <div className="bg-[#F5F5F0] text-[#1A1A1A]">
       <main className="flex min-h-screen flex-col gap-12 pb-20">
-        <header className="section pb-0 pt-8">
+        <header className="section pb-0">
           <div className="container">
-            <div className="rounded-3xl bg-[#0A2A4E] p-10 text-white shadow-2xl">
-              <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-                <div className="flex items-center gap-4">
-                  <Image
-                    src="/logo.jpg"
-                    alt="Logotipo Facilities"
-                    width={68}
-                    height={68}
-                    className="rounded-full border border-white/30 bg-white/10 p-1"
-                    priority
-                  />
-                  <div>
-                    <p className="text-sm uppercase tracking-[0.3em] text-white/70">
-                      Facilities
-                    </p>
-                    <p className="text-lg font-semibold">
-                      Construção e Manutenção Completa
-                    </p>
-                  </div>
-                </div>
+            <div className="rounded-[48px] bg-[#8B9A8C] px-8 py-16 text-center text-white shadow-2xl sm:px-12 lg:px-20">
+              <p className="text-xs font-semibold uppercase tracking-[0.6em] text-white/70">
+                Desde 1985 • Construção | Manutenção | Facilities
+              </p>
+              <h1 className="mt-6 text-4xl font-semibold leading-tight tracking-[-0.02em] text-white sm:text-5xl lg:text-6xl">
+                Acabamento impecável e obras completas para valorizar seu imóvel
+              </h1>
+              <p className="mt-6 text-lg text-white/80">
+                Tudo começa com uma ideia. Talvez você queira transformar um
+                apartamento, erguer um novo espaço comercial ou manter a operação
+                funcionando sem interrupção. Nós lideramos cada etapa com
+                fiscalização técnica e garantia total.
+              </p>
+              <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
                 <a
-                  href="https://wa.me/5562994149502?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20or%C3%A7amento%20gratuito."
+                  href={WHATSAPP_LINK}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center rounded-full bg-[#F9A825] px-6 py-3 text-sm font-semibold uppercase tracking-wide text-[#0A2A4E] transition hover:bg-[#ffb733]"
+                  className="pill-button bg-white text-[#1A1A1A] hover:bg-[#e4e4dc]"
                 >
                   {CTA_LABEL}
                 </a>
+                <a
+                  href="#servicos"
+                  className="pill-button border border-white/50 text-white hover:bg-white/10"
+                >
+                  Conheça nossas frentes
+                </a>
               </div>
-              <div className="mt-10 grid gap-10 lg:grid-cols-[1.6fr,1fr] lg:items-center">
-                <div className="space-y-6">
-                  <p className="text-sm font-semibold uppercase tracking-[0.4em] text-white/70">
-                    Construção • Manutenção • Facilities
-                  </p>
-                  <h1 className="text-4xl font-semibold leading-tight md:text-5xl">
-                    Seu imóvel precisa de reparos? Da construção à manutenção,
-                    nós resolvemos.
-                  </h1>
-                  <p className="text-lg text-white/80">
-                    Serviços completos de elétrica, hidráulica, pintura e
-                    reformas para casas, apartamentos e empresas — com agilidade,
-                    acompanhamento técnico e garantia total.
-                  </p>
-                  <div className="flex flex-wrap gap-4">
-                    <a
-                      href="https://wa.me/5562994149502?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20or%C3%A7amento%20gratuito."
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center justify-center rounded-full bg-[#F9A825] px-6 py-3 text-base font-semibold text-[#0A2A4E] transition hover:bg-[#ffb733]"
-                    >
-                      {CTA_LABEL}
-                    </a>
-                    <a
-                      href="#servicos"
-                      className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-base font-semibold text-white transition hover:bg-white/10"
-                    >
-                      Conheça Nossas Soluções
-                    </a>
+              <div className="mt-12 grid gap-6 sm:grid-cols-3">
+                {trustHighlights.map((item) => (
+                  <div
+                    key={item.title}
+                    className="rounded-3xl bg-white/10 px-6 py-5 text-left text-sm text-white/90"
+                  >
+                    <p className="text-base font-semibold text-white">
+                      {item.title}
+                    </p>
+                    <p className="mt-2 text-white/80">{item.description}</p>
                   </div>
-                </div>
-                <div className="rounded-2xl bg-white/10 p-6 backdrop-blur">
-                  <p className="text-sm font-semibold uppercase text-white/70">
-                    Resultado para você
-                  </p>
-                  <ul className="mt-4 space-y-4 text-base">
-                    <li className="flex items-start gap-3">
-                      <span className="mt-1 block h-2 w-2 rounded-full bg-[#F9A825]" />
-                      Tranquilidade para proprietários, síndicos e gestores com
-                      uma única equipe responsável por tudo.
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="mt-1 block h-2 w-2 rounded-full bg-[#F9A825]" />
-                      Valorização imediata do imóvel com acabamentos impecáveis
-                      e limpeza total após o serviço.
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="mt-1 block h-2 w-2 rounded-full bg-[#F9A825]" />
-                      Agilidade com cronogramas claros, comunicação contínua e
-                      garantia documentada.
-                    </li>
-                  </ul>
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -183,13 +140,13 @@ export default function Home() {
         <section className="section pt-0">
           <div className="container space-y-6">
             <div className="max-w-3xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.4em] text-[#0A2A4E]/80">
-                Antes e Depois em destaque
+              <p className="text-sm font-semibold uppercase tracking-[0.5em] text-[#8B9A8C]">
+                Antes e depois em destaque
               </p>
-              <h2 className="mt-3 text-3xl font-semibold text-[#0A2A4E]">
+              <h2 className="mt-3 text-4xl font-semibold text-[#1A1A1A]">
                 Veja como transformamos ambientes com acabamento preciso
               </h2>
-              <p className="mt-4 text-lg text-[#333333]/80">
+              <p className="mt-4 text-lg text-[#444444]">
                 Resultado real de um projeto recente: planejamento, execução do
                 forro e finalização com limpeza completa. A mesma equipe que
                 lidera este processo pode estar no seu imóvel.
@@ -227,66 +184,72 @@ export default function Home() {
         </section>
 
         <section id="servicos" className="section">
-          <div className="container space-y-8">
-            <div className="max-w-2xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.4em] text-[#0A2A4E]/80">
+          <div className="container space-y-10">
+            <div className="max-w-3xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.5em] text-[#8B9A8C]">
                 Nossos serviços
               </p>
-              <h2 className="mt-3 text-3xl font-semibold text-[#0A2A4E]">
-                Soluções completas para seu imóvel
+              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.02em] text-[#1A1A1A]">
+                Construtores de confiança para cada fase da obra
               </h2>
-              <p className="mt-4 text-lg text-[#333333]/80">
-                Atuamos do reparo emergencial às grandes reformas, integrando
-                engenharia, mão de obra especializada e gestão de facilities em
-                um único contrato.
+              <p className="mt-4 text-lg text-[#444444]">
+                Tudo começa com uma ideia. Talvez você queira abrir um negócio.
+                Talvez você queira transformar um passatempo em algo mais sério.
+                Ou talvez você tenha um projeto criativo para compartilhar com o
+                mundo. A Oranssi executa com planejamento, segurança e
+                comunicação constante.
               </p>
             </div>
-            <div className="grid gap-6 md:grid-cols-3">
-              {serviceCategories.map((category) => (
-                <div
-                  key={category.title}
-                  className="flex flex-col gap-4 rounded-2xl bg-white p-6 shadow-lg"
+            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+              {serviceCards.map((card) => (
+                <article
+                  key={card.title}
+                  className="flex h-full flex-col gap-4 rounded-[32px] bg-white px-6 py-8 shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
                 >
-                  <h3 className="text-xl font-semibold text-[#0A2A4E]">
-                    {category.title}
+                  <div className="h-14 w-14 rounded-full border border-[#8B9A8C]/40 text-center text-2xl font-semibold text-[#8B9A8C]">
+                    •
+                  </div>
+                  <h3 className="text-2xl font-semibold tracking-[-0.02em] text-[#1A1A1A]">
+                    {card.title}
                   </h3>
-                  <ul className="space-y-3 text-base text-[#333333]/80">
-                    {category.items.map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <span className="mt-2 block h-2 w-2 rounded-full bg-[#F9A825]" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                  <p className="text-base leading-relaxed text-[#555555]">
+                    {card.description}
+                  </p>
+                  <span className="mt-auto text-sm font-semibold uppercase tracking-[0.3em] text-[#8B9A8C]">
+                    ENTRE EM CONTATO
+                  </span>
+                </article>
               ))}
             </div>
           </div>
         </section>
 
         <section className="section">
-          <div className="container rounded-3xl bg-white p-10 shadow-xl">
-            <div className="grid gap-10 lg:grid-cols-2">
+          <div className="container rounded-[40px] bg-white p-12 shadow-xl">
+            <div className="grid gap-12 lg:grid-cols-2">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.4em] text-[#0A2A4E]/80">
+                <p className="text-sm font-semibold uppercase tracking-[0.5em] text-[#8B9A8C]">
                   Diferenciais
                 </p>
-                <h2 className="mt-3 text-3xl font-semibold text-[#0A2A4E]">
+                <h2 className="mt-4 text-4xl font-semibold text-[#1A1A1A]">
                   Tranquilidade do início ao fim do projeto
                 </h2>
-                <p className="mt-4 text-lg text-[#333333]/80">
-                  Cada etapa é planejada para reduzir ruído, evitar retrabalhos
-                  e manter você informado. Transparência total para proprietários,
+                <p className="mt-4 text-lg text-[#444444]">
+                  Cada etapa é planejada para reduzir ruído, evitar retrabalhos e
+                  manter você informado. Transparência total para proprietários,
                   síndicos e gestores de facilities.
                 </p>
               </div>
-              <div className="space-y-6">
+              <div className="grid gap-6 sm:grid-cols-2">
                 {trustHighlights.map((item) => (
-                  <div key={item.title} className="rounded-2xl bg-[#F4F6F8] p-5">
-                    <p className="text-lg font-semibold text-[#0A2A4E]">
+                  <div
+                    key={item.title}
+                    className="rounded-[28px] bg-[#F5F5F0] p-6 transition hover:-translate-y-1 hover:shadow-lg"
+                  >
+                    <p className="text-lg font-semibold text-[#1A1A1A]">
                       {item.title}
                     </p>
-                    <p className="mt-2 text-[#333333]/80">{item.description}</p>
+                    <p className="mt-3 text-[#555555]">{item.description}</p>
                   </div>
                 ))}
               </div>
@@ -295,31 +258,27 @@ export default function Home() {
         </section>
 
         <section className="section">
-          <div className="container space-y-8">
-            <div className="text-center">
-              <p className="text-sm font-semibold uppercase tracking-[0.4em] text-[#0A2A4E]/80">
-                Prova social
+          <div className="container rounded-[40px] bg-[#8B9A8C] px-8 py-16 text-white shadow-2xl">
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="text-sm font-semibold uppercase tracking-[0.5em] text-white/70">
+                O que dizem nossos clientes
               </p>
-              <h2 className="mt-3 text-3xl font-semibold text-[#0A2A4E]">
-                Clientes que já contam com a nossa equipe
+              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.02em]">
+                Experiência sem dor de cabeça, do briefing à entrega
               </h2>
-              <p className="mt-4 text-lg text-[#333333]/80">
-                Pontualidade, limpeza e qualidade em cada entrega — seja em um
-                apartamento ou em toda a operação comercial.
-              </p>
             </div>
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="mt-12 grid gap-6 md:grid-cols-3">
               {testimonials.map((item) => (
                 <figure
                   key={item.name}
-                  className="rounded-2xl bg-white p-6 text-left shadow-lg"
+                  className="rounded-3xl bg-white/10 p-8 text-left shadow-lg backdrop-blur"
                 >
-                  <blockquote className="text-base italic text-[#333333]/90">
+                  <blockquote className="text-lg leading-relaxed text-white">
                     “{item.quote}”
                   </blockquote>
-                  <figcaption className="mt-4 text-sm font-semibold text-[#0A2A4E]">
+                  <figcaption className="mt-6 text-sm font-semibold uppercase tracking-[0.3em] text-white/80">
                     {item.name}
-                    <span className="block text-xs font-normal text-[#333333]/70">
+                    <span className="mt-1 block text-xs font-normal tracking-normal text-white/70">
                       {item.role}
                     </span>
                   </figcaption>
@@ -331,39 +290,42 @@ export default function Home() {
 
         <section id="contato" className="section pt-0">
           <div className="container">
-            <div className="rounded-3xl bg-[#0A2A4E] p-10 text-white shadow-2xl">
-              <div className="grid gap-8 lg:grid-cols-[2fr,1fr] lg:items-center">
+            <div className="grid overflow-hidden rounded-[40px] bg-[#1A1A1A] text-white shadow-2xl lg:grid-cols-5">
+              <div className="relative h-full min-h-[320px] lg:col-span-2">
+                <Image
+                  src="/sala/forro_sala2.jpg"
+                  alt="Detalhe de projeto executado"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <div className="space-y-6 px-8 py-12 lg:col-span-3 lg:px-12">
+                <p className="text-sm font-semibold uppercase tracking-[0.5em] text-white/60">
+                  Pronto para criar sua visão?
+                </p>
+                <h2 className="text-4xl font-semibold tracking-[-0.02em]">
+                  Conversamos sobre briefing, cronograma e investimento em uma
+                  única chamada.
+                </h2>
+                <p className="text-lg text-white/80">
+                  Tudo começa com uma ideia. Talvez você queira abrir um negócio,
+                  talvez queira transformar um passatempo em algo mais sério. Envie
+                  seu desafio e devolvemos um plano com 100% de transparência.
+                </p>
                 <div>
-                  <p className="text-sm font-semibold uppercase tracking-[0.4em] text-white/70">
-                    Última chamada
-                  </p>
-                  <h2 className="mt-3 text-3xl font-semibold">
-                    Não deixe um pequeno problema virar uma grande dor de
-                    cabeça.
-                  </h2>
-                  <p className="mt-4 text-lg text-white/80">
-                    Fale com nossos especialistas hoje mesmo e receba um
-                    orçamento gratuito com cronograma de execução em até 24h
-                    úteis.
-                  </p>
-                </div>
-                <div className="flex flex-col gap-4 rounded-2xl bg-white/10 p-6 text-center">
-                  <p className="text-sm uppercase tracking-[0.3em] text-white/80">
-                    Pronto para começar?
-                  </p>
                   <a
-                    href="https://wa.me/5562994149502?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20or%C3%A7amento%20gratuito."
+                    href={WHATSAPP_LINK}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center justify-center rounded-full bg-[#F9A825] px-6 py-3 text-base font-semibold text-[#0A2A4E] transition hover:bg-[#ffb733]"
+                    className="pill-button bg-white text-[#1A1A1A] hover:bg-[#f0f0f0]"
                   >
                     {CTA_LABEL}
                   </a>
-                  <p className="text-xs text-white/70">
-                    Preferimos atendimento consultivo. Envie seu desafio e
-                    retornamos com a melhor solução.
-                  </p>
                 </div>
+                <p className="text-sm uppercase tracking-[0.3em] text-white/60">
+                  Atendimento consultivo • Retorno em até 24h úteis
+                </p>
               </div>
             </div>
           </div>
