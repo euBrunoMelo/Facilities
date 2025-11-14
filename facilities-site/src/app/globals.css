@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #0a2a4e;
+  --accent: #f9a825;
+  --surface: #ffffff;
+  --surface-alt: #f4f6f8;
+  --text: #333333;
+}
+
+@theme inline {
+  --color-background: var(--surface);
+  --color-foreground: var(--text);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  background-color: var(--surface-alt);
+  color: var(--text);
+}
+
+::selection {
+  background-color: color-mix(in srgb, var(--primary) 70%, white);
+  color: white;
+}
+
+.section {
+  @apply w-full px-4 py-16 sm:px-6 lg:px-8;
+}
+
+.container {
+  @apply mx-auto max-w-6xl;
+}
